@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment3">
+    <fragment
+        android:id="@+id/titleFragment3"
+        android:name="tech.cscoder.triviaapp.TitleFragment"
+        android:label="TitleFragment" >
+        <action
+            android:id="@+id/action_titleFragment3_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="tech.cscoder.triviaapp.GameFragment"
+        android:label="GameFragment" >
+        <action
+            android:id="@+id/action_gameFragment_to_successFragment"
+            app:destination="@id/successFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gameFragment_to_failureFragment"
+            app:destination="@id/failureFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/failureFragment"
+        android:name="tech.cscoder.triviaapp.FailureFragment"
+        android:label="fragment_failure"
+        tools:layout="@layout/fragment_failure" >
+        <action
+            android:id="@+id/action_failureFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/titleFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/successFragment"
+        android:name="tech.cscoder.triviaapp.SuccessFragment"
+        android:label="fragment_success"
+        tools:layout="@layout/fragment_success" >
+        <action
+            android:id="@+id/action_successFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/titleFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="tech.cscoder.triviaapp.AboutFragment"
+        android:label="@string/title_about_trivia" />
+</navigation>
