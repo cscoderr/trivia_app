@@ -16,6 +16,8 @@ class SuccessFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentSuccessBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_success, container, false)
+        var args = SuccessFragmentArgs.fromBundle(arguments)
+        val data = args.numCorrect
         binding.nextMatchButton.setOnClickListener { view:View -> view.findNavController().navigate(R.id.action_titleFragment3_to_gameFragment) }
         return binding.root
     }

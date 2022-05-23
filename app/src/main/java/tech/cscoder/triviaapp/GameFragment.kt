@@ -17,9 +17,10 @@ class GameFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding: FragmentGameBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_game,container, false)
-
-        binding.submitButton.setOnClickListener { view: View -> view.findNavController().navigate(R.id.action_gameFragment_to_successFragment) }
-        binding.failureButton.setOnClickListener { view:View -> view.findNavController().navigate(R.id.action_gameFragment_to_failureFragment) }
+        val numQuestions = 10
+        val answerIndex = 1
+        binding.submitButton.setOnClickListener { view: View -> view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToSuccessFragment(numQuestions, answerIndex)) }
+        binding.failureButton.setOnClickListener { view:View -> view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToFailureFragment()) }
         return binding.root;
     }
 }
