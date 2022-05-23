@@ -19,11 +19,16 @@
         <action
             android:id="@+id/action_gameFragment_to_successFragment"
             app:destination="@id/successFragment"
+            app:enterAnim="@anim/slide_in_left"
             app:popUpTo="@id/gameFragment"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_gameFragment_to_failureFragment"
             app:destination="@id/failureFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right"
             app:popUpTo="@id/gameFragment"
             app:popUpToInclusive="true" />
     </fragment>

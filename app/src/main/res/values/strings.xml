@@ -12,4 +12,5 @@
     <string name="title_about_trivia">About Trivia</string>
     <string name="title_trivia_rules">Trivia Rules</string>
     <string name="about">About</string>
+    <string name="share_success_text">Hello shared sucessful</string>
 </resources>

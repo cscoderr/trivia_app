@@ -23,4 +23,6 @@ class GameFragment : Fragment() {
         binding.failureButton.setOnClickListener { view:View -> view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToFailureFragment()) }
         return binding.root;
     }
+
+
 }
